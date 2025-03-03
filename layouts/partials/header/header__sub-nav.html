@@ -1,0 +1,30 @@
+{{/*  <nav class="header__sub-nav">
+    <ul class="header__sub-nav-list">
+      {{ $secondaryMenus := .Site.Menus.secondary }}
+      {{ range $secondaryMenus }}
+        <li class="header__sub-nav-item {{ if $.IsMenuCurrent "secondary" . }}active{{ end }}">
+          <a href="{{ .URL }}" class="header__sub-nav-link">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>  */}}
+
+  <nav class="header__sub-nav">
+    <ul class="header__sub-nav-list">
+      {{ $topLevelMenus := where .Site.Menus.secondary "Parent" "" }}
+      {{ range $topLevelMenus }}
+        <li class="header__sub-nav-item {{ if or ($.IsMenuCurrent "secondary" .) ($.HasMenuCurrent "secondary" .) }}active{{ end }}">
+          <a href="{{ .URL }}" class="header__sub-nav-link">{{ .Name }}</a>
+          {{ if .HasChildren }}
+            <ul class="header__sub-nav-sublist">
+              {{ range .Children }}
+                <li class="header__sub-nav-subitem {{ if $.IsMenuCurrent "secondary" . }}active{{ end }}">
+                  <a href="{{ .URL }}" class="header__sub-nav-link">{{ .Name }}</a>
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </nav>

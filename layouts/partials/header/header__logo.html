@@ -1,0 +1,7 @@
+<a href="/" class="header__logo">
+    {{ with resources.Get "images/logo.png" }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Mopheads Logo">
+    {{ else }}
+        <p>Image "a.jpg" not found.</p>
+    {{ end }}
+</a>

@@ -1,0 +1,35 @@
+[services] # Correct key
+  heading = "Our Cleaning Services"
+  subheading = "Tailored cleaning solutions for your needs."
+  cta_link = "/pricing/"
+  cta_text = "View Pricing"
+
+[commercial-cleaning]
+    heading = "Commercial Cleaning Services"
+    subheading = "Expert cleaning for your business"
+    cta_link = "/contact/"
+    cta_text = "Get a commercial quote"
+
+[domestic-cleaning]
+    heading = "Domestic Cleaning Services"
+    subheading = "Keeping your home sparkling clean"
+    cta_link = "/contact/"
+    cta_text = "Get a domestic quote"
+
+[end-of-lease-cleaning]
+    heading = "End of Lease Cleaning Services"
+    subheading = "Stress-free end of lease cleaning"
+    cta_link = "/contact/"
+    cta_text = "Get an end of lease quote"
+
+[lawn-mowing]
+    heading = "Lawn Mowing Services"
+    subheading = "Keeping your lawns neat and tidy"
+    cta_link = "/contact/"
+    cta_text = "Get a lawn mowing quote"
+
+[default]
+  heading = "Mopheads Cleaning Newcastle"
+  subheading = "Services You Can Rely On"
+  cta_link = "/services/"
+  cta_text = "View Our Services"

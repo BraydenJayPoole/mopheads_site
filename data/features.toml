@@ -1,0 +1,23 @@
+[domestic]
+  title = "Domestic Cleaning"
+  description = "We offer a comprehensive domestic cleaning service to keep your home sparkling clean."
+  icon = ""
+  link = "/services/domestic-cleaning/"
+
+[commercial]
+  title = "Commercial Cleaning"
+  description = "Maintain a professional and healthy work environment with our commercial cleaning services."
+  icon = ""
+  link = "/services/commercial-cleaning/"
+
+[endOfLease]
+  title = "End of Lease Cleaning"
+  description = "Stress free end of lease cleaning"
+  icon = ""
+  link = "/services/end-of-lease-cleaning/"
+
+[lawnMowing]
+  title = "Lawn Mowing"
+  description = "Keeping your lawns neat and tidy"
+  icon = ""
+  link = "/services/lawn-mowing/"

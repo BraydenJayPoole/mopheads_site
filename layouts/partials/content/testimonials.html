@@ -1,0 +1,11 @@
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-slider">
+      {{ range .Site.Data.testimonials.testimonials }} {{/* Access nested testimonials array */}}
+        <div class="testimonial">
+          <p>"{{ .quote }}"</p>
+          <p class="author">- {{ .name }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </section>

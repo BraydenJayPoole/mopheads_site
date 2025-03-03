@@ -1,0 +1,32 @@
+{{/*  {{ define "main" }}
+
+{{ partial "components/border.html" . }}
+{{ partial "content/hero.html" . }}
+
+{{ partial "components/feature-panel.html" (index .Site.Data.features "domestic") }}
+{{ partial "components/feature-panel.html" (index .Site.Data.features "commercial") }}
+{{ partial "content/testimonials.html" . }}   */}}
+
+{{ define "main" }}
+<div class="rive-container" style="width: 100%; height: 100vh; position: absolute; top: 0; left: 0;">
+    <canvas id="riveCanvas" style="width: 100%; height: 100%;"></canvas>
+  </div>
+  
+  <script src="https://unpkg.com/@rive-app/canvas@1.2.12"></script>
+  <script>
+  // Initialize Rive
+  new rive.Rive({
+    src: '.static\mopheads_landing_page_demo.riv',
+    canvas: document.getElementById('riveCanvas'),
+    autoplay: true,
+    stateMachines: 1,
+    artboard: 1,
+    onLoad: () => {
+        console.log('Rive animation loaded!');
+    },
+    onLoadError: (error) => {
+      console.error('Error loading Rive animation:', error);
+    }
+  });
+  </script>
+{{ end }}

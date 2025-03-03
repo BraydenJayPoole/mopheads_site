@@ -1,0 +1,10 @@
+{{ with . }} 
+<div class="feature-item">
+  <img src="{{ .icon }}" alt="{{ .title }} Icon">
+  <h3>{{ .title }}</h3>
+  <p>{{ .description }}</p>
+  <a href="{{ .link }}" class="button">Learn More</a>
+</div>
+{{ else }}
+  <p>Feature not found.</p>
+{{ end }}

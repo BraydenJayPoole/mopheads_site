@@ -1,0 +1,10 @@
+<section class="features">
+    <h2>{{ .title | default "Our Cleaning Services" }}</h2>
+    <div class="features-list">
+      {{ range .features }}
+          {{ if .IsPublished }}
+              {{ partial "components/feature-panel.html" (dict "feature" .) }}
+          {{ end }}
+      {{ end }}
+    </div>
+  </section>

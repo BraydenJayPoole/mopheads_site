@@ -1,0 +1,19 @@
+<nav class="header__nav">
+  <ul class="header__nav-list">
+    {{ $topLevelMenus := where .Site.Menus.main "Parent" "" }}
+    {{ range $topLevelMenus }}
+      <li class="header__nav-item {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}active{{ end }}">
+        <a href="{{ .URL }}" class="header__nav-link">{{ .Name }}</a>
+        {{ if .HasChildren }}
+          <ul class="header__nav-sublist">
+            {{ range .Children }}
+              <li class="header__nav-subitem {{ if $.IsMenuCurrent "main" . }}active{{ end }}">
+                <a href="{{ .URL }}" class="header__nav-link">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+</nav>
